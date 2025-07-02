@@ -1,0 +1,29 @@
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background: yellow;
+}
+
+.box {
+  background-color: red;
+  width: 100px;
+  aspect-ratio: 1;
+  border: 3px solid black;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;    
+  font-size: 2rem;
+}
+
+.box:nth-child(4) {
+    display: none;
+}
