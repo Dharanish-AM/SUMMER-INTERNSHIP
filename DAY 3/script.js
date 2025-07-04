@@ -1,51 +1,38 @@
-let a = "ready";
-console.log(a);
+function fetchUsers() {
+  const container = document.getElementById("usersContainer");
 
+  container.innerHTML = "";
 
-setTimeout  (() => {
-    console.log("Hello, World!");
-
-}, 0
-)
-
-setTimeout(() => {
-    console.log("1st");
-    setTimeout(() => {
-        console.log("2nd");
-        setTimeout(() => {
-            console.log("3rd");
-        }, 2000);
-    }, 2000);
-}, 2000);  
-
-
-var x = 5;
-console.log(x);
-
-let mypromise = new Promise((resolve, reject) => {
-    let sucess = false;
-    if (sucess) {
-        resolve("Promise resolved");
-    }else
-    {
-        reject("Promise rejected");
-    }
-});
-
-mypromise.then((q)=>console.log(q))
-.catch((w) => console.log(w));
-
-const handlepromise = async () => {
-    try{
-    const a=await mypromise;
-    console.log(a);
-    }
-    catch(err){
-        console.log( err);
-    }
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => response.json())
+    .then((users) => {
+      displayUsers(users);
+    })
+    .catch((error) => {
+      container.innerHTML = `<p>Error: ${error.message}</p>`;
+    });
 }
-handlepromise();
+fetchUsers();
 
-setInterval(() => {
-    console.log("Hello, World!");
-}, 1000);
+function displayUsers(users) {
+  const container = document.getElementById("usersContainer");
+
+  if (users.length === 0) {
+    container.innerHTML = "<p>No users found.</p>";
+    return;
+  }
+
+  users.forEach((user) => {
+    const userDiv = document.createElement("div");
+    userDiv.className = "user";
+    userDiv.innerHTML = `
+                    <h2>${user.name}</h2>
+                    <p><strong>Username:</strong> ${user.username}</p>
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <p><strong>Phone:</strong> ${user.phone}</p>
+                    <p><strong>Address:</strong> ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}</p>
+                    <p><strong>Company:</strong> ${user.company.name}</p>
+                `;
+    container.appendChild(userDiv);
+  });
+}
