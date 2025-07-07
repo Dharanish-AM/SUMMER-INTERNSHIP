@@ -1,0 +1,71 @@
+.counter-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #619095;
+  color: #333;
+}
+
+.count-display {
+  font-size: 48px;
+  margin: 20px 0;
+  color: #333;
+}
+
+.step-control {
+  margin-bottom: 20px;
+}
+
+.step-input {
+  margin-left: 10px;
+  padding: 5px 10px;
+  width: 80px;
+  font-size: 16px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-increment {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-decrement {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-reset {
+  background-color: #607d8b;
+  color: white;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.limit-message {
+  color: #d32f2f;
+  font-weight: bold;
+}
