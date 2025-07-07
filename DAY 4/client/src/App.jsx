@@ -1,5 +1,5 @@
 import React from "react";
-import "./Counter.css";
+import "./App.css";
 
 export default function LandingPage() {
   return (
