@@ -1,0 +1,37 @@
+
+.todo-table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  text-align: left;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
+}
+
+.todo-table th, .todo-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.todo-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.page-button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.page-button:hover {
+  background-color: #f0f0f0;
+}
