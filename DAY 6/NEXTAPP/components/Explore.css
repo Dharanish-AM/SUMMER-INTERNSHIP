@@ -1,0 +1,25 @@
+.explore-con{
+    height:35vh;
+    background-color: #122a0f;
+    color:white;
+    padding:25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.header{
+    font-weight:300;
+    font-size: 50px;
+    padding:5px;
+}
+.para{
+    padding-bottom:20px;
+}
+.exploreBtn{
+    width:138px;
+    height:50px;
+    border-radius: 5px;
+}

@@ -1,0 +1,24 @@
+.introCon{
+    height: 70vh;
+    width:60vw;
+    color:rgb(129, 228, 129);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+}
+
+.para{
+    font-size:1.5rem;
+    padding:50px;
+}
+.para p{
+    padding:5px;
+}
+
+.Header{
+    padding:10px;
+    font-size: 70px;
+}

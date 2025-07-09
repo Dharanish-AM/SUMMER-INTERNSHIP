@@ -1,0 +1,40 @@
+.phoneImgContainer{
+    
+    background-color: white;
+    width:50vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.phoneImage{
+    width:500px;
+    height: 300px;
+    border-radius: 50%;
+}
+.contentinsideexploreandconnect{
+    width:50vh;
+}
+.parainside{
+    width: 40vw;
+    padding:20px;
+}
+
+.container{
+ background-color: rgb(255, 255, 255);
+    width:99vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.exploreandconnect{
+    background-color: rgb(147, 122, 200);
+    flex-direction: row;
+    width:50vw;
+    height: 60vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}

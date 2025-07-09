@@ -1,0 +1,41 @@
+.ImgContainer{
+    
+    background-color: rgb(86, 81, 81);
+    width:50vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Image{
+    width:500px;
+    height: 300px;
+    border-radius: 50%;
+}
+.contentinsidepassion{
+    width:50vh;
+}
+.parainsidepassion{
+    width: 40vw;
+    padding:20px;
+}
+
+.container-passion{
+ background-color: rgb(74, 64, 64);
+    width:99vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.passion{
+    background-color:rgb(86, 81, 81);
+    color:white;
+    flex-direction: row;
+    width:50vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
