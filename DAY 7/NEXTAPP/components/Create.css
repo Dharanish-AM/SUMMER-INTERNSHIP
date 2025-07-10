@@ -1,0 +1,26 @@
+.create-con{
+    height:30vh;
+    
+    background-color: #e90de5;
+    color:white;
+    padding:25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.createheader{
+    font-weight:300;
+    font-size: 50px;
+    padding:20px;
+}
+.paracreate{
+    padding-bottom:20px;
+}
+.createBtn{
+    width:138px;
+    height:50px;
+    border-radius: 5px;
+}

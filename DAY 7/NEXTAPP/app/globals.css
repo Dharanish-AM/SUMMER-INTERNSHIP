@@ -1,0 +1,14 @@
+.Page-con{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 90vh;
+    width:99vw;
+    background-image: url('/image.jpeg');
+
+}
+*{
+    
+    margin:0px;
+    padding:0px;
+}
