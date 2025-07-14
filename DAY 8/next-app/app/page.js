@@ -4,28 +4,22 @@ import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <main style={{ textAlign: 'center', padding: '2rem' }}>
-      <h1>Welcome to the Marketplace</h1>
-      <p>Select Buyer or Seller from the navigation.</p>
+    <main style={{ textAlign: 'center', padding: '1rem' }}>
+      <h2>Marketplace</h2>
+      <p>Choose login type:</p>
 
-      <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+      <div style={{ marginTop: '1rem' }}>
         <Link href="/buyer/login">
-          <button style={buttonStyle}>Buyer</button>
+          <button style={{ padding: '0.5rem 1rem', margin: '0.25rem', background: '#007bff', color: 'white', border: 'none' }}>
+            Buyer
+          </button>
         </Link>
         <Link href="/seller/login">
-          <button style={buttonStyle}>Seller</button>
+          <button style={{ padding: '0.5rem 1rem', margin: '0.25rem', background: '#28a745', color: 'white', border: 'none' }}>
+            Seller
+          </button>
         </Link>
       </div>
     </main>
   );
 }
-
-const buttonStyle = {
-  padding: '0.8rem 2rem',
-  fontSize: '1rem',
-  borderRadius: '8px',
-  border: 'none',
-  backgroundColor: '#0070f3',
-  color: 'white',
-  cursor: 'pointer',
-};

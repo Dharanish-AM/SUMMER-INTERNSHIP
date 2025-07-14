@@ -14,42 +14,25 @@ export default function SellerLogin() {
   };
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '400px', margin: 'auto' }}>
-      <h2>Seller Login</h2>
+    <div style={{ padding: '1rem', maxWidth: '300px', margin: 'auto' }}>
+      <h3>Seller Login</h3>
       <input
         type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         placeholder="Username"
-        style={inputStyle}
+        style={{ width: '100%', marginBottom: '0.5rem', padding: '0.3rem' }}
       />
       <input
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
-        style={inputStyle}
+        style={{ width: '100%', marginBottom: '0.5rem', padding: '0.3rem' }}
       />
-      <button onClick={handleLogin} style={buttonStyle}>Login</button>
+      <button onClick={handleLogin} style={{ padding: '0.5rem 1rem', background: '#28a745', color: 'white', border: 'none' }}>
+        Login
+      </button>
     </div>
   );
 }
-
-const inputStyle = {
-  width: '100%',
-  marginBottom: '1rem',
-  padding: '0.5rem',
-  fontSize: '1rem',
-  borderRadius: '5px',
-  border: '1px solid #ccc',
-};
-
-const buttonStyle = {
-  padding: '0.6rem 2rem',
-  backgroundColor: '#28a745',
-  color: 'white',
-  border: 'none',
-  borderRadius: '5px',
-  fontSize: '1rem',
-  cursor: 'pointer',
-};
