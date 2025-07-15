@@ -43,6 +43,13 @@ export default function BlogList() {
           <ul className="space-y-4">
             {blogs.map((blog) => (
               <li key={blog.id} className="bg-white border p-4 rounded shadow">
+                {blog.image && (
+                  <img
+                    src={blog.image}
+                    alt="blog"
+                    className="w-full h-48 object-cover rounded mb-2"
+                  />
+                )}
                 <h2 className="text-lg font-semibold mb-2">{blog.title}</h2>
                 <p className="text-sm text-gray-700">{blog.content}</p>
               </li>

@@ -5,6 +5,7 @@ export default function Admin() {
   const [blogs, setBlogs] = useState([]);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [image, setImage] = useState('');
   const [editingId, setEditingId] = useState(null);
   const [userEmail, setUserEmail] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,6 +29,7 @@ export default function Admin() {
   const openCreateModal = () => {
     setTitle('');
     setContent('');
+    setImage('');
     setEditingId(null);
     setIsModalOpen(true);
   };
@@ -37,6 +39,7 @@ export default function Admin() {
     if (!blog) return;
     setTitle(blog.title);
     setContent(blog.content);
+    setImage(blog.image || '');
     setEditingId(id);
     setIsModalOpen(true);
   };
@@ -44,6 +47,7 @@ export default function Admin() {
   const closeModal = () => {
     setTitle('');
     setContent('');
+    setImage('');
     setEditingId(null);
     setIsModalOpen(false);
   };
@@ -52,10 +56,10 @@ export default function Admin() {
     e.preventDefault();
     if (!title.trim() || !content.trim()) return;
     if (editingId === null) {
-      const newBlog = { id: Date.now(), title, content };
+      const newBlog = { id: Date.now(), title, content, image };
       setBlogs([newBlog, ...blogs]);
     } else {
-      setBlogs(blogs.map((b) => (b.id === editingId ? { ...b, title, content } : b)));
+      setBlogs(blogs.map((b) => (b.id === editingId ? { ...b, title, content, image } : b)));
     }
     closeModal();
   };
@@ -86,6 +90,9 @@ export default function Admin() {
           <ul className="space-y-4">
             {blogs.map((blog) => (
               <li key={blog.id} className="border p-3 rounded bg-white">
+                {blog.image && (
+                  <img src={blog.image} alt="blog" className="w-full h-48 object-cover rounded mb-2" />
+                )}
                 <h3 className="text-base font-medium mb-1">{blog.title}</h3>
                 <p className="text-sm text-gray-700 mb-2">
                   {blog.content.length > 80 ? blog.content.slice(0, 80) + '...' : blog.content}
@@ -123,6 +130,13 @@ export default function Admin() {
               rows={4}
               className="w-full border p-2 mb-3 text-sm"
               required
+            />
+            <input
+              type="text"
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
+              placeholder="Image URL"
+              className="w-full border p-2 mb-3 text-sm"
             />
             <div className="flex justify-end gap-2">
               <button type="button" onClick={closeModal} className="px-3 py-1 text-sm bg-gray-200">Cancel</button>
